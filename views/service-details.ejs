@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= service.name %> | SevaPoint</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+<header class="navbar">
+    <a href="/" class="logo">
+        <span class="logo-mark">S</span>
+        <span>Seva<span>Point</span></span>
+    </a>
+    <nav>
+        <a href="/">Home</a>
+        <a href="/#services">Services</a>
+        <a href="/#categories">Categories</a>
+    </nav><button class="language-btn" id="languageBtn" type="button">हिंदी</button>
+</header>
+
+<main class="service-detail-page">
+    <div class="service-detail-card">
+
+        <div class="detail-tags">
+            <span class="result-category"><%= service.category %></span>
+            <span class="result-level"><%= service.level %></span>
+        </div>
+
+        <h1><%= service.name %></h1>
+
+        <% if (service.verified) { %>
+            <div class="verified">✓ Official source listed by SevaPoint</div>
+        <% } %>
+
+        <p class="detail-description"><%= service.description %></p>
+
+        <section class="detail-section">
+            <h2>Who can use this service?</h2>
+            <p><%= service.eligibility %></p>
+        </section>
+
+        <section class="detail-section">
+            <h2>📄 Documents / Requirements</h2>
+            <ul>
+                <% service.documents.forEach(document => { %>
+                    <li><%= document %></li>
+                <% }) %>
+            </ul>
+        </section>
+
+        <section class="detail-section">
+            <h2>📝 How to access this service</h2>
+            <ol>
+                <% service.steps.forEach(step => { %>
+                    <li><%= step %></li>
+                <% }) %>
+            </ol>
+        </section>
+
+        <section class="safety-box">
+            <h2>🛡️ Stay Safe</h2>
+            <p>Always check that you are visiting the official website before entering personal information, OTPs, passwords or payment details.</p>
+        </section>
+
+        <section class="verification-box">
+            <strong>🟢 SevaPoint Source Information</strong>
+            <p>Official source: <%= service.officialUrl %></p>
+            <p>Last verified: <%= service.lastVerified %></p>
+        </section>
+
+        <a href="<%= service.officialUrl %>" target="_blank" rel="noopener noreferrer" class="official-btn detail-official-btn">
+            Visit Official Website →
+        </a>
+
+        <a href="/" class="back-btn">← Back to SevaPoint</a>
+    </div>
+</main>
+
+<footer>
+    <div>
+        <strong>SevaPoint</strong>
+        <p>Find. Verify. Access.</p>
+    </div>
+    <p>© 2026 SevaPoint. Independent public-service guide.</p>
+</footer>
+
+<script src="/js/language.js"></script>
+</body>
+</html>

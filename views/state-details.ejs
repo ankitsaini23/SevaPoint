@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title><%= state.name %> Services | SevaPoint</title><link rel="stylesheet" href="/css/style.css"></head>
+<body>
+<header class="navbar"><a href="/" class="logo"><span class="logo-mark">S</span><span>Seva<span>Point</span></span></a>
+<nav><a href="/">Home</a><a href="/states">States</a></nav><button class="language-btn" id="languageBtn" type="button">हिंदी</button></header>
+<main class="state-detail-page">
+<div class="state-detail-header"><div class="state-large-code"><%= state.code %></div><div><p class="eyebrow"><%= state.type.toUpperCase() %> SERVICES</p><h1><%= state.name %></h1><p>Public-service resources for <%= state.name %>.</p></div></div>
+<div class="state-services">
+<% if (state.services.length === 0) { %><div class="no-results"><h2>Services coming soon</h2><p>We're currently adding verified <%= state.name %> services.</p></div><% } %>
+<% state.services.forEach(service => { %>
+<article class="state-service-card"><div class="state-service-icon">🏛️</div><div><h2><%= service.name %></h2><span class="result-category"><%= service.category %></span><p><%= service.description %></p><% if(service.verified){ %><span class="verified">✓ Official source</span><% } %><div class="category-actions"><a href="<%= service.officialUrl %>" target="_blank" rel="noopener noreferrer" class="official-btn">Visit Official Website ↗</a></div></div></article>
+<% }) %>
+</div></main>
+<footer><div><strong>SevaPoint</strong><p>Find. Verify. Access.</p></div><p>© 2026 SevaPoint. Independent public-service guide.</p></footer>
+<script src="/js/language.js"></script>
+</body></html>
