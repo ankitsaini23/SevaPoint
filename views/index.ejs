@@ -3,15 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>SevaPoint | Public Service Guide</title>
+
     <link rel="stylesheet" href="/css/style.css">
 </head>
+
 <body>
+
+    <!-- NAVBAR -->
     <header class="navbar">
-        <a href="/" class="logo">
+
+          <a href="/" class="logo">
             <span class="logo-mark">S</span>
             <span>Seva<span>Point</span></span>
         </a>
+
         <nav>
             <a href="/" class="active">Home</a>
             <a href="#services">Services</a>
@@ -20,114 +27,424 @@
             <a href="#about">About</a>
             <a href="#contact">Contact</a>
         </nav>
-        <button class="language-btn" id="languageBtn">हिंदी</button>
+
+        <button
+            class="language-btn"
+            id="languageBtn"
+            type="button">
+            हिंदी
+        </button>
+
     </header>
 
+
     <main>
+
+        <!-- HERO -->
         <section class="hero">
+
             <div class="hero-content">
-                <div class="badge">🇮🇳 One trusted place for public services</div>
-                <h1>Find the service you need.<br><span>Find the official source.</span></h1>
-                <p>SevaPoint helps you discover public services, understand the process, and reach the official website safely.</p>
 
+                <div class="badge">
+                    🇮🇳 One trusted place for public services
+                </div>
+
+                <h1>
+                    Find the service you need.
+                    <br>
+                    <span>Find the official source.</span>
+                </h1>
+
+                <p>
+                    SevaPoint helps you discover public services,
+                    understand the process, and reach the official
+                    website safely.
+                </p>
+
+
+                <!-- SEARCH -->
                 <div class="search-box">
+
                     <span>🔍</span>
-                    <input id="searchInput" type="text" placeholder="Search Aadhaar, PAN, scholarship, driving licence...">
-                    <button id="searchBtn">Search</button>
+
+                    <input
+                        id="searchInput"
+                        type="text"
+                        placeholder="Search Aadhaar, PAN, scholarship, driving licence..."
+                    >
+
+                    <button id="searchBtn">
+                        Search
+                    </button>
+
                 </div>
 
+
+                <!-- QUICK SEARCH -->
                 <div class="quick-search">
+
                     <span>Popular:</span>
-                    <button data-search="Aadhaar">Aadhaar</button>
-                    <button data-search="PAN Card">PAN Card</button>
-                    <button data-search="Passport">Passport</button>
-                    <button data-search="Scholarship">Scholarships</button>
+
+                    <button data-search="Aadhaar">
+                        Aadhaar
+                    </button>
+
+                    <button data-search="PAN Card">
+                        PAN Card
+                    </button>
+
+                    <button data-search="Passport">
+                        Passport
+                    </button>
+
+                    <button data-search="Scholarship">
+                        Scholarships
+                    </button>
+
                 </div>
 
-                <div id="searchResults" class="search-results"></div>
+
+                <!-- SEARCH RESULTS -->
+                <div
+                    id="searchResults"
+                    class="search-results">
+                </div>
+
             </div>
+
         </section>
 
-        <section class="section" id="services">
+
+        <!-- POPULAR SERVICES -->
+        <section
+            class="section"
+            id="services">
+
             <div class="section-heading">
+
                 <div>
-                    <p class="eyebrow">EXPLORE</p>
-                    <h2>Popular Services</h2>
+
+                    <p class="eyebrow">
+                        EXPLORE
+                    </p>
+
+                    <h2>
+                        Popular Services
+                    </h2>
+
                 </div>
-                <a href="#categories">View all →</a>
+
+                <a href="#categories">
+                    View all →
+                </a>
+
             </div>
+
 
             <div class="service-grid">
+
                 <article class="service-card">
-                    <div class="icon blue">🪪</div>
-                    <h3>Aadhaar Services</h3>
-                    <p>Find official Aadhaar services and information.</p>
-                    <span class="verified">✓ Official source</span>
+
+                    <div class="icon blue">
+                        🪪
+                    </div>
+
+                    <h3>
+                        Aadhaar Services
+                    </h3>
+
+                    <p>
+                        Find official Aadhaar services
+                        and information.
+                    </p>
+
+                    <span class="verified">
+                        ✓ Official source
+                    </span>
+
                 </article>
+
+
                 <article class="service-card">
-                    <div class="icon orange">🧾</div>
-                    <h3>PAN Card</h3>
-                    <p>Find information for PAN-related services.</p>
-                    <span class="verified">✓ Official source</span>
+
+                    <div class="icon orange">
+                        🧾
+                    </div>
+
+                    <h3>
+                        PAN Card
+                    </h3>
+
+                    <p>
+                        Find information for
+                        PAN-related services.
+                    </p>
+
+                    <span class="verified">
+                        ✓ Official source
+                    </span>
+
                 </article>
+
+
                 <article class="service-card">
-                    <div class="icon purple">🎓</div>
-                    <h3>Scholarships</h3>
-                    <p>Discover government scholarship resources.</p>
-                    <span class="verified">✓ Official source</span>
+
+                    <div class="icon purple">
+                        🎓
+                    </div>
+
+                    <h3>
+                        Scholarships
+                    </h3>
+
+                    <p>
+                        Discover government
+                        scholarship resources.
+                    </p>
+
+                    <span class="verified">
+                        ✓ Official source
+                    </span>
+
                 </article>
+
+
                 <article class="service-card">
-                    <div class="icon green">🚗</div>
-                    <h3>Transport</h3>
-                    <p>Find driving licence and transport services.</p>
-                    <span class="verified">✓ Official source</span>
+
+                    <div class="icon green">
+                        🚗
+                    </div>
+
+                    <h3>
+                        Transport
+                    </h3>
+
+                    <p>
+                        Find driving licence
+                        and transport services.
+                    </p>
+
+                    <span class="verified">
+                        ✓ Official source
+                    </span>
+
                 </article>
+
             </div>
+
         </section>
 
-        <section class="section categories" id="categories">
+
+        <!-- CATEGORIES -->
+        <section
+            class="section categories"
+            id="categories">
+
             <div class="section-heading">
+
                 <div>
-                    <p class="eyebrow">BROWSE</p>
-                    <h2>Services by Category</h2>
+
+                    <p class="eyebrow">
+                        BROWSE
+                    </p>
+
+                    <h2>
+                        Services by Category
+                    </h2>
+
                 </div>
+
             </div>
+
 
             <div class="category-grid">
-                <a href="/category/Identity" class="category-card">🪪 <strong>Identity & Documents</strong><small>Aadhaar, PAN, Passport</small></a>
-                <a href="/category/Education" class="category-card">🎓 <strong>Education</strong><small>Scholarships & certificates</small></a>
-                <a href="/category/Jobs" class="category-card">💼 <strong>Government Jobs</strong><small>Jobs & recruitment</small></a>
-                <a href="/category/Schemes" class="category-card">💰 <strong>Schemes & Benefits</strong><small>Government schemes</small></a>
-                <a href="/category/Health" class="category-card">🏥 <strong>Health</strong><small>Public health services</small></a>
-                <a href="/category/Agriculture" class="category-card">🌾 <strong>Agriculture</strong><small>Farmer services</small></a>
+
+                <a
+                    href="/category/Identity"
+                    class="category-card">
+
+                    🪪
+
+                    <strong>
+                        Identity & Documents
+                    </strong>
+
+                    <small>
+                        Aadhaar, PAN, Passport
+                    </small>
+
+                </a>
+
+
+                <a
+                    href="/category/Education"
+                    class="category-card">
+
+                    🎓
+
+                    <strong>
+                        Education
+                    </strong>
+
+                    <small>
+                        Scholarships & certificates
+                    </small>
+
+                </a>
+
+
+                <a
+                    href="/category/Jobs"
+                    class="category-card">
+
+                    💼
+
+                    <strong>
+                        Government Jobs
+                    </strong>
+
+                    <small>
+                        Jobs & recruitment
+                    </small>
+
+                </a>
+
+
+                <a
+                    href="/category/Schemes"
+                    class="category-card">
+
+                    💰
+
+                    <strong>
+                        Schemes & Benefits
+                    </strong>
+
+                    <small>
+                        Government schemes
+                    </small>
+
+                </a>
+
+
+                <a
+                    href="/category/Health"
+                    class="category-card">
+
+                    🏥
+
+                    <strong>
+                        Health
+                    </strong>
+
+                    <small>
+                        Public health services
+                    </small>
+
+                </a>
+
+
+                <a
+                    href="/category/Agriculture"
+                    class="category-card">
+
+                    🌾
+
+                    <strong>
+                        Agriculture
+                    </strong>
+
+                    <small>
+                        Farmer services
+                    </small>
+
+                </a>
+
             </div>
+
         </section>
 
+
+        <!-- SAFETY -->
         <section class="trust-section">
-            <div class="trust-icon">🛡️</div>
-            <div>
-                <p class="eyebrow">SAFETY FIRST</p>
-                <h2>Helping you find the genuine source</h2>
-                <p>SevaPoint is designed to guide users toward official public-service websites and reduce confusion caused by misleading or unofficial links.</p>
+
+            <div class="trust-icon">
+                🛡️
             </div>
+
+            <div>
+
+                <p class="eyebrow">
+                    SAFETY FIRST
+                </p>
+
+                <h2>
+                    Helping you find the genuine source
+                </h2>
+
+                <p>
+                    SevaPoint is designed to guide users
+                    toward official public-service websites
+                    and reduce confusion caused by misleading
+                    or unofficial links.
+                </p>
+
+            </div>
+
         </section>
 
-        <section class="section about" id="about">
-            <p class="eyebrow">ABOUT SEVAPOINT</p>
-            <h2>Public services, made easier.</h2>
-            <p>SevaPoint is an independent platform that helps people discover public services and understand where to access them. SevaPoint is not a government website.</p>
+
+        <!-- ABOUT -->
+        <section
+            class="section about"
+            id="about">
+
+            <p class="eyebrow">
+                ABOUT SEVAPOINT
+            </p>
+
+            <h2>
+                Public services, made easier.
+            </h2>
+
+            <p>
+                SevaPoint is an independent platform that
+                helps people discover public services and
+                understand where to access them.
+                SevaPoint is not a government website.
+            </p>
+
         </section>
+
     </main>
 
+
+    <!-- FOOTER -->
     <footer id="contact">
+
         <div>
-            <strong>SevaPoint</strong>
-            <p>Find. Verify. Access.</p>
+
+            <strong>
+                SevaPoint
+            </strong>
+
+            <p>
+                Find. Verify. Access.
+            </p>
+
         </div>
-        <p>© 2026 SevaPoint. Independent public-service guide.</p>
+
+        <p>
+            © 2026 SevaPoint.
+            Independent public-service guide.
+        </p>
+
     </footer>
 
+
+    <!-- JAVASCRIPT -->
     <script src="/js/script.js"></script>
-<script src="/js/language.js"></script>
+    <script src="/js/language.js"></script>
+
 </body>
 </html>
