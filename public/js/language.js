@@ -7,6 +7,9 @@
     "Popular Services":"लोकप्रिय सेवाएँ","Services by Category":"श्रेणी के अनुसार सेवाएँ",
     "Helping you find the genuine source":"आपको आधिकारिक स्रोत खोजने में मदद",
     "Public services, made easier.":"जन सेवाएँ, अब आसान।",
+    "Find the service you need.":"अपनी ज़रूरत की सेवा खोजें।",
+    "Find the official source.":"आधिकारिक स्रोत खोजें।",
+    "One trusted place for public services":"जन सेवाओं के लिए एक भरोसेमंद जगह",
     "Official source":"आधिकारिक स्रोत","✓ Official source":"✓ आधिकारिक स्रोत",
     "View Details →":"विवरण देखें →","Official Website ↗":"आधिकारिक वेबसाइट ↗",
     "Visit Official Website →":"आधिकारिक वेबसाइट खोलें →","Back to SevaPoint":"सेवापॉइंट पर वापस जाएँ",
@@ -26,14 +29,25 @@
     "Search":"खोजें","Popular:":"लोकप्रिय:"
   };
 
-  function translateElement(el, hindi) {
-    if (!el.dataset.spOriginal) el.dataset.spOriginal = el.textContent;
-    const original = el.dataset.spOriginal.trim();
-    if (hindi && dict[original]) {
-      el.textContent = el.textContent.replace(original, dict[original]);
-    } else if (!hindi) {
-      el.textContent = el.dataset.spOriginal;
-    }
+  function translateTextNodes(root, hindi) {
+    const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT);
+    const textNodes = [];
+    let node;
+
+    while ((node = walker.nextNode())) textNodes.push(node);
+
+    textNodes.forEach(textNode => {
+      if (!textNode.spOriginal) textNode.spOriginal = textNode.nodeValue;
+
+      const original = textNode.spOriginal.trim();
+      const translation = dict[original];
+      if (!translation) return;
+
+      const source = hindi ? translation : original;
+      const leadingWhitespace = textNode.nodeValue.match(/^\s*/)[0];
+      const trailingWhitespace = textNode.nodeValue.match(/\s*$/)[0];
+      textNode.nodeValue = leadingWhitespace + source + trailingWhitespace;
+    });
   }
 
   function setLang(lang) {
@@ -41,10 +55,7 @@
     document.documentElement.lang = hindi ? "hi" : "en";
     document.body.classList.toggle("hindi-mode", hindi);
 
-    document.querySelectorAll("nav a, .language-btn, .eyebrow, h1, h2, h3, p, small, strong, span, a, button").forEach(el => {
-      if (el.id === "languageBtn") return;
-      translateElement(el, hindi);
-    });
+    translateTextNodes(document.body, hindi);
 
     const input = document.getElementById("searchInput");
     if (input) input.placeholder = hindi
@@ -57,11 +68,14 @@
     localStorage.setItem("sevapointLanguage", lang);
   }
 
-  document.addEventListener("DOMContentLoaded", function () {
+  function initializeLanguage() {
     const btn = document.getElementById("languageBtn");
     if (btn) btn.addEventListener("click", function () {
       setLang((localStorage.getItem("sevapointLanguage") || "en") === "en" ? "hi" : "en");
     });
     setLang(localStorage.getItem("sevapointLanguage") || "en");
-  });
+    document.documentElement.classList.remove("language-pending");
+  }
+
+  initializeLanguage();
 })();

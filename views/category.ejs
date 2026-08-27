@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title><%= category %> Services | SevaPoint</title><link rel="stylesheet" href="/css/style.css"></head>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title><%= category %> Services | SevaPoint</title><style>html.language-pending body { visibility: hidden; }</style><script>try { if (localStorage.getItem("sevapointLanguage")) document.documentElement.classList.add("language-pending"); } catch (error) {}</script><link rel="stylesheet" href="/css/style.css"></head>
 <body><header class="navbar"><a href="/" class="logo"><span class="logo-mark">S</span><span>Seva<span>Point</span></span></a><nav><a href="/">Home</a><a href="/states">States</a></nav><button class="language-btn" id="languageBtn" type="button">हिंदी</button></header>
 <main class="category-page"><div class="category-header"><p class="eyebrow">SEVAPOINT SERVICES</p><h1><%= category %></h1><p>Explore public services available in this category.</p></div>
 <div class="category-services"><% if(!services.length){ %><div class="no-results"><h2>No services available</h2><p>We haven't added services to this category yet.</p></div><% } %>
