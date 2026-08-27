@@ -482,7 +482,15 @@ footer p { color: #aebbd0; margin: 6px 0 0; }
 }
 
 @media (max-width: 520px) {
-    .language-btn { display: none; }
+    .navbar { padding: 0 14px; }
+    .logo { font-size: 18px; }
+    .logo-mark { width: 32px; height: 32px; }
+    .language-btn {
+        display: block;
+        min-width: 68px;
+        padding: 8px 10px;
+        font-size: 12px;
+    }
     .service-grid, .category-grid { grid-template-columns: 1fr; }
     .search-box { padding-left: 12px; }
     .search-box button { font-size: 12px; }
