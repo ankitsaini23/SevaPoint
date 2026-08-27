@@ -26,7 +26,30 @@
     "Something went wrong":"कुछ गलत हो गया","Please try again.":"कृपया फिर से प्रयास करें।",
     "States & Union Territories":"राज्य और केंद्र शासित प्रदेश",
     "Services coming soon":"सेवाएँ जल्द उपलब्ध होंगी",
-    "Search":"खोजें","Popular:":"लोकप्रिय:"
+    "Search":"खोजें","Popular:":"लोकप्रिय:",
+    "GET IN TOUCH":"संपर्क करें","Contact SevaPoint":"सेवापॉइंट से संपर्क करें",
+    "Have feedback, a correction, or a public-service question? Send us a message.":"सुझाव, सुधार या जन सेवा से जुड़ा सवाल है? हमें संदेश भेजें।",
+    "We would like to hear from you.":"हम आपसे सुनना चाहेंगे।",
+    "Help us keep SevaPoint clear, useful, and connected to genuine public-service sources.":"सेवापॉइंट को स्पष्ट, उपयोगी और आधिकारिक जन सेवा स्रोतों से जुड़ा रखने में हमारी मदद करें।",
+    "Your name":"आपका नाम","Email address":"ईमेल पता","Message":"संदेश",
+    "Send message":"संदेश भेजें",
+    "Public services, made easier.":"जन सेवाएँ, अब आसान।",
+    "SevaPoint helps people find, understand, and safely access public services from one trusted guide.":"सेवापॉइंट लोगों को एक भरोसेमंद गाइड के ज़रिए जन सेवाएँ खोजने, समझने और सुरक्षित रूप से उपयोग करने में मदद करता है।",
+    "Find. Verify. Access.":"खोजें। जाँचें। उपयोग करें।",
+    "Government services can be difficult to find and confusing to navigate. SevaPoint brings useful service information together and guides visitors toward genuine official websites.":"सरकारी सेवाएँ खोजना और उनका उपयोग करना कठिन हो सकता है। सेवापॉइंट उपयोगी जानकारी को एक जगह लाता है और लोगों को आधिकारिक वेबसाइटों तक पहुँचने में मदद करता है।",
+    "SevaPoint is an independent public-service guide. It is not a government website and does not replace official government portals.":"सेवापॉइंट एक स्वतंत्र जन सेवा गाइड है। यह सरकारी वेबसाइट नहीं है और आधिकारिक सरकारी पोर्टल का विकल्प नहीं है।",
+    "THE PERSON BEHIND SEVAPOINT":"सेवापॉइंट के संस्थापक",
+    "Founder & Developer":"संस्थापक और डेवलपर",
+    "Ankit Saini created SevaPoint to make public-service information simpler, safer, and easier for everyone to access.":"अंकित सैनी ने सेवापॉइंट को जन सेवा की जानकारी को सभी के लिए सरल, सुरक्षित और आसानी से उपलब्ध बनाने के लिए बनाया है।",
+    "MEET THE TEAM":"टीम से मिलिए",
+    "The team behind SevaPoint.":"सेवापॉइंट के पीछे की टीम।",
+    "Co-founder & Developer":"सह-संस्थापक और डेवलपर",
+    "Co-founder & Design Management":"सह-संस्थापक और डिज़ाइन प्रबंधन",
+    "Co-founder & Website Management":"सह-संस्थापक और वेबसाइट प्रबंधन",
+    "Leads the vision and develops the SevaPoint platform.":"सेवापॉइंट की दिशा तय करते हैं और प्लेटफॉर्म विकसित करते हैं।",
+    "Helps build and improve the platform’s features.":"प्लेटफॉर्म के फीचर्स बनाने और बेहतर करने में मदद करते हैं।",
+    "Shapes the visual experience and design direction.":"विज़ुअल अनुभव और डिज़ाइन की दिशा तय करते हैं।",
+    "Manages the website and keeps it running smoothly.":"वेबसाइट का प्रबंधन करते हैं और इसे सुचारु रूप से चलाते हैं।"
   };
 
   function translateTextNodes(root, hindi) {

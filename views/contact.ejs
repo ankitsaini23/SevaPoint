@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact SevaPoint</title>
+    <style>html.language-pending body { visibility: hidden; }</style>
+    <script>try { if (localStorage.getItem("sevapointLanguage")) document.documentElement.classList.add("language-pending"); } catch (error) {}</script>
+    <link rel="stylesheet" href="/css/style.css?v=20260827">
+</head>
+<body>
+    <header class="navbar">
+        <a href="/" class="logo">
+            <span class="logo-mark">S</span>
+            <span>Seva<span>Point</span></span>
+        </a>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/#services">Services</a>
+            <a href="/states">States</a>
+            <a href="/about">About</a>
+            <a href="/contact" class="active">Contact</a>
+        </nav>
+        <button class="language-btn" id="languageBtn" type="button">हिंदी</button>
+    </header>
+
+    <main class="contact-page">
+        <div class="contact-header">
+            <p class="eyebrow">GET IN TOUCH</p>
+            <h1>Contact SevaPoint</h1>
+            <p>Have feedback, a correction, or a public-service question? Send us a message.</p>
+        </div>
+
+        <div class="contact-layout">
+            <section class="contact-info">
+                <div class="contact-icon">✉</div>
+                <h2>We would like to hear from you.</h2>
+                <p>Help us keep SevaPoint clear, useful, and connected to genuine public-service sources.</p>
+                <a class="contact-email" href="mailto:sevapoint.com@gmail.com">sevapoint.com@gmail.com</a>
+            </section>
+
+                <form class="contact-form" action="/contact" method="post">
+                    <% if (status) { %>
+                        <p class="contact-status"><%= status %></p>
+                    <% } %>
+                <label for="name">Your name</label>
+                <input id="name" name="name" type="text" autocomplete="name" required>
+
+                <label for="email">Email address</label>
+                <input id="email" name="email" type="email" autocomplete="email" required>
+
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="6" required></textarea>
+
+                <button class="official-btn" type="submit">Send message</button>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <div>
+            <strong>SevaPoint</strong>
+            <p>Find. Verify. Access.</p>
+        </div>
+        <p>© 2026 SevaPoint. Independent public-service guide.</p>
+    </footer>
+
+    <script src="/js/language.js"></script>
+</body>
+</html>
